@@ -11,17 +11,47 @@ return(
     <View>
       <View>
         <TouchableOpacity>
-          <Text></Text>
+          <Text>X</Text>
         </TouchableOpacity>
       </View>
       <View>
         <TouchableOpacity>
-          <Text></Text>
+          <Text>X</Text>
         </TouchableOpacity>
       </View>
       <View>
         <TouchableOpacity>
-          <Text></Text>
+          <Text>X</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <TouchableOpacity>
+          <Text>X</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <TouchableOpacity>
+          <Text>X</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <TouchableOpacity>
+          <Text>X</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <TouchableOpacity>
+          <Text>X</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <TouchableOpacity>
+          <Text>X</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <TouchableOpacity>
+          <Text>X</Text>
         </TouchableOpacity>
       </View>
     </View>
