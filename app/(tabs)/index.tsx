@@ -1,10 +1,11 @@
 import { Text, TouchableOpacity, View } from "react-native";
 
+
 export default function index() {
   const name = "ALan";
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'FFAAAA' }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFAAAA' }}>
       <Text>Jogo da Velha</Text>;
       <Text>Vencedor</Text>;
 
