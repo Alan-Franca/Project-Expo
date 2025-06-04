@@ -1,33 +1,52 @@
+import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
+type Player = 'X' | 'O' | null;
+type Board = Player[]
 
 export default function index() {
-  const cell = () => {
-    return <TouchableOpacity style={styles.square}>
-            <Text style={styles.symbol}>X</Text>
-          </TouchableOpacity>
+
+  const[board, setBoard] = useState<Board>(Array(9).fill(null));
+  const [currentPlayer, setCurrentPlayer] = useState<Player>('X');
+  const [winner, seWinner] = useState<Player | 'draw'>(null);
+
+  const handlePress = (index: number) => {
+    const newBoard = [...board];
+    newBoard[index] = currentPlayer;
+    setBoard(newBoard);
+
+    setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
+  }
+
+  const cell = (index: number) => {
+    return (
+      <TouchableOpacity style={styles.square} onPress={() => handlePress(index)}>
+      <Text style={styles.symbol}>{board[index]}</Text>
+      </TouchableOpacity>
+    )
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Jogo da Velha</Text>;
-      <Text style={styles.status}>Vencedor</Text>;
+      
+      <Text style={styles.title}>Jogo da Velha</Text>
+      <Text style={styles.status}>Vencedor</Text>
 
       <View style={styles.board}>
         <View style={styles.row}>
-          {cell ()}
-          {cell ()}
-          {cell ()}
+          {cell (0)}
+          {cell (1)}
+          {cell (2)}
         </View>
         <View style={styles.row}>
-          {cell ()}
-          {cell ()}
-          {cell ()}
+          {cell (3)}
+          {cell (4)}
+          {cell (5)}
         </View>
         <View style={styles.row}>
-          {cell ()}
-          {cell ()}
-          {cell ()}
+          {cell (6)}
+          {cell (7)}
+          {cell (8)}
         </View>
       </View>
 
@@ -58,6 +77,7 @@ const styles = StyleSheet.create({
   },
   board: {
     marginBottom: 20,
+
   },
   row: {
     flexDirection: 'row',
